@@ -1,21 +1,32 @@
 import java.util.List;
 
-public interface ManageContactList {
-	
-	public void addContact(String Username);
+public interface ManageContactListI {
 	
 	/**
-	 *  
-	 * @param UserID 
+	 * adds a contact to users contacts list
+	 * @param userid		id of the user
+	 * @param contactid		id of the contact (a contact is also a user)
+	 * @return				true: the contact was added
 	 */
-	public void deleteContact(int UserID);
+	public boolean addContact(int userid, int contactid);
 	
+	/**
+	 * contact a user from a users contact list
+	 * @param userid		id of the user
+	 * @param contactid		id of the contact (a contact is also a user)
+	 */
+	public void deleteContact(int userid, int contactid);
 	
-	public List<Contact> getContactList();
+	/**
+	 * returns an array with all the contact of a user
+	 * @param userid	id of the user
+	 * @return			int-array with all the contact-ids belonging to the contacts of the user
+	 */
+	public int[] getContactList(int userid);
 	
-	
-	public Contact getContact(String Username);//?
-	
+	/*-----------------------???????????????????????----------------------------*/
+	//public Contact getContact(String Username);//?
+	/*-----------------------???????????????????????----------------------------*/
 	
 	
 }
