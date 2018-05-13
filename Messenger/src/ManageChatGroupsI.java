@@ -1,3 +1,4 @@
+import java.util.List;
 
 public interface ManageChatGroupsI {
 	
@@ -20,7 +21,7 @@ public interface ManageChatGroupsI {
 	
 	/**
 	 * updates a conversation
-	 * @param chat_id	chat_id to find the conversation the should be updated
+	 * @param chat_id	chat_id to find the conversation that should be updated
 	 * @param name		new name for the conversation
 	 * @param picture	new picture for the conversation
 	 * @return			true: conversation was updated
@@ -28,17 +29,14 @@ public interface ManageChatGroupsI {
 	public boolean updateConversation(int chat_id, String name, byte[] picture);
 	
 	
-	/*-----------------------??????????????????????????????----------------------*/
 	
 	/**
-	 *
-	 * returns a two dimensional array with all the informations of a conversation conversations
-	 * @return
+	 * returns 
+	 * returns List of Objects with all the informations from all conversations
+	 * @return 			List of Objects with Information belonging to the conversations
 	 */
-	public String[][] getAllConversations();
+	public List<Object[]> getAllConversations();
 	
-	
-	/*-----------------------??????????????????????????????----------------------*/
 	
 	/**
 	 * adds a user to the conversation
