@@ -1,3 +1,4 @@
+import java.util.List;
 
 public interface CommunicationI {
 	
@@ -9,12 +10,11 @@ public interface CommunicationI {
 	 */
 	public void sendMessage(String txt, int user_id, int chat_id);
 	
-	/*-----------------------???????????????????????----------------------------*/
 	/**
-	 * @param 	chat_id id of the chat
-	 * @return 	String-Array with all Messages belonging to the chat
+	 * returns information for all Messages belonging to a chat
+	 * @param 	chat-id of the chat
+	 * @return 	List with information for all Messages belonging to the chat
 	 */
-	public String[][] recieveMessage(int chat_id);
+	public List<Object[]> recieveMessage(int chat_id);
 
-	/*-----------------------???????????????????????----------------------------*/
 }
