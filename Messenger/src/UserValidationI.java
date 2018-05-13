@@ -3,9 +3,9 @@ public interface UserValidationI {
 	
 	/**
 	 * checks if a user exists
-	 * @param user_id	the id of the user
-	 * @return			return: true if user exists
+	 * @param userid	id of the user
+	 * @return			true: user exists
 	 */
-	public boolean checkIfUserExists(int user_id);
+	public boolean checkIfUserExists(int userid);
 
 }

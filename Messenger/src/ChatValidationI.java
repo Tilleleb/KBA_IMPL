@@ -2,11 +2,10 @@
 public interface ChatValidationI {
 
 	/**
-	 * checks if a chat with the given id exists
-	 * @param id of the chat
-	 * @return true: chat exists
+	 * checks if a chat with given id exists
+	 * @param chat_id	id of the chat
+	 * @return 			true: chat exists
 	 */
-	public boolean chatIfChatExists(int chat_id);
+	public boolean checkIfChatExists(int chat_id);
 	
-
 }
